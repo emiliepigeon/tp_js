@@ -1,0 +1,102 @@
+/* style.css */
+
+/* Centrer le contenu de la page */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+section.calcultva {
+    text-align: center;
+}
+
+/* Styler les boutons */
+#boutonduhaut {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#boutonduhaut input[type="button"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Couleurs des boutons du haut */
+#btn1 {
+    background-color: #090a2c;
+    width: 25%;
+}
+
+#btn2 {
+    background-color: #ebcb2a;
+}
+
+#btn3 {
+    background-color: #f1121c;
+}
+
+#btn4 {
+    background-color: #17bf17;
+    color: #fff;
+}
+
+#btn5 {
+    background-color: #ebcb2a;
+    color: #fff;
+}
+
+#btn6 {
+    background-color: #f1121c;
+    color: #fff;
+}
+
+/* Styler le conteneur du tableau */
+.container {
+    max-width: 800px;
+}
+
+/* Styler le tableau */
+#tableaucalcul {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+#tableaucalcul th, #tableaucalcul td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#tableaucalcul th {
+    background-color: #f0f0f0;
+}
+
+#tableaucalcul input[type="text"], #tableaucalcul input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+#tableaucalcul input[type="button"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tableaucalcul input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ccc;
+}

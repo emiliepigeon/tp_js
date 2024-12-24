@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau calcul TVA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="calcultva">
+        <h1>TVA Tableau</h1>
+        <div id="boutonduhaut">
+            <!--Bouton btn1 Ajouter une ligne dans le tableau-->
+            <input type="button" id="btn1" name="btn1" value="Ajouter une ligne">
+            <!--Bouton btn2 Supprimer une ligne dans le tableau-->
+            <input type="button" id="btn2" name="btn2" value="Supprimer une ligne">
+            <!--Bouton btn1 Effacer une ligne dans le tableau-->
+            <input type="button" id="btn3" name="btn3" value="Effacer une ligne">
+        </div>
+        <div class="container">
+            <table id="tableaucalcul">
+                <thead>
+                    <tr>
+                        <th scope="col">Libellé</th>
+                        <th scope="col">Prix HT</th>
+                        <th scope="col">TVA</th>
+                        <th scope="col">Prix TTC</th>
+                        <th scope="col">Calculer</th>
+                        <th scope="col">Effacer</th>
+                        <th scope="col">Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" id="input1" name="input1" placeholder="Libellé"></td>
+                        <td><input type="text" id="input2" name="input2" placeholder="prix HT"></td>
+                        <td><input type="number" id="input3" name="input3" placeholder="TVA"></td>
+                        <td><input type="text" id="input4" name="input4" placeholder="prix TTC"></td>
+                        <td><input type="button" id="btn4" name="btn4" value="Calculer"></td>
+                        <td><input type="button" id="btn5" name="btn5" value="Effacer"></td>
+                        <td><input type="button" id="btn6" name="btn6" value="Supprimer"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
