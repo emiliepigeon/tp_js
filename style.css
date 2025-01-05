@@ -61,9 +61,6 @@ section.calcultva {
 }
 
 /* Styler le conteneur du tableau */
-.container {
-    max-width: 800px;
-}
 
 /* Styler le tableau */
 #tableaucalcul {
@@ -96,7 +93,35 @@ section.calcultva {
     cursor: pointer;
 }
 
+/* pour designer les input du tableau*/
 #tableaucalcul input:focus {
     outline: none;
     box-shadow: 0 0 5px #ccc;
+}
+
+.selection {
+    background-color: #e9f8ff;
+    /* Couleur de fond pour la ligne sélectionnée */
+}
+
+/* Style pour cacher le label */
+.hidden {
+    display: none;
+}
+
+.selection {
+    background-color: #e9f8ff;
+    /* Couleur de fond pour la ligne sélectionnée */
+}
+
+.euro-symbol {
+    margin-left: 5px;
+    /* Espace entre le champ et le symbole */
+}
+
+.consignes {
+    font-size: 14px;
+}
+span {
+    color: #f1121c;
 }

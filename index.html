@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
     <section class="calcultva">
         <h1>TVA Tableau</h1>
+        <p class="consignes">Pour réinitialiser les champs ou supprimer une ligne
+            ou travailler dans la ligne <br>
+            <span>cliquer dessus pour la sélectionner.</span> </p>
         <div id="boutonduhaut">
-            <!--Bouton btn1 Ajouter une ligne dans le tableau-->
+            <!-- Bouton btn1 Ajouter une ligne dans le tableau -->
             <input type="button" id="btn1" name="btn1" value="Ajouter une ligne">
-            <!--Bouton btn2 Supprimer une ligne dans le tableau-->
-            <input type="button" id="btn2" name="btn2" value="Supprimer une ligne">
-            <!--Bouton btn1 Effacer une ligne dans le tableau-->
-            <input type="button" id="btn3" name="btn3" value="Effacer une ligne">
+            <!-- Bouton btn2 Vider les champs d'une ligne dans le tableau -->
+            <input type="button" id="btn2" name="btn2" value="Vider les champs">
+            <!-- Bouton btn3 Supprimer une ligne dans le tableau -->
+            <input type="button" id="btn3" name="btn3" value="Supprimer la ligne">
         </div>
         <div class="container">
+            <!-- tableau de calcul -->
             <table id="tableaucalcul">
                 <thead>
                     <tr>
@@ -28,19 +33,36 @@
                         <th scope="col">TVA</th>
                         <th scope="col">Prix TTC</th>
                         <th scope="col">Calculer</th>
-                        <th scope="col">Effacer</th>
-                        <th scope="col">Supprimer</th>
+                        <!-- <th scope="col">Effacer</th>
+                        <th scope="col">Supprimer</th> -->
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><input type="text" id="input1" name="input1" placeholder="Libellé"></td>
-                        <td><input type="text" id="input2" name="input2" placeholder="prix HT"></td>
-                        <td><input type="number" id="input3" name="input3" placeholder="TVA"></td>
-                        <td><input type="text" id="input4" name="input4" placeholder="prix TTC"></td>
-                        <td><input type="button" id="btn4" name="btn4" value="Calculer"></td>
-                        <td><input type="button" id="btn5" name="btn5" value="Effacer"></td>
-                        <td><input type="button" id="btn6" name="btn6" value="Supprimer"></td>
+                    <tr id="tr1" onclick="selectLigne(this)">
+                        <td><input type="text" class="libelle" id="input1" name="input1" placeholder="Libellé"></td>
+                        <td>
+                            <input type="text" class="prixht" id="input2" name="input2" placeholder="Prix HT">
+                            <span class="euro-symbol">€</span> <!-- Symbole euro -->
+                        </td>
+                        <td>
+                            <!-- Label pour le sélecteur de TVA -->
+                            <label id="tvaLabel" for="choix">Choisissez la TVA :</label>
+                            <!-- Sélecteur de TVA -->
+                            <select name="choix" class="selection" id="choix" onchange="toggleLabel()">
+                                <option value="">--Choisir TVA--</option>
+                                <option value="2.8">2.8%</option>
+                                <option value="5.5">5.5%</option>
+                                <option value="10">10%</option>
+                                <option value="20">20%</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" class="prixttc" id="input4" name="input4" placeholder="Prix TTC">
+                            <span class="euro-symbol">€</span> <!-- Symbole euro -->
+                        </td>
+                        <td><input type="button" class="btn-calcul" id="btn4" name="btn4" value="Calculer"></td>
+                        <!-- <td><input type="button" class="btn-effacer" id="btn5" name="btn5" value="Effacer"></td>
+                        <td><input type="button" class="btn-supprimer" id="btn6" name="btn6" value="Supprimer"></td> -->
                     </tr>
                 </tbody>
             </table>
